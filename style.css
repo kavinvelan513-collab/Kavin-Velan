@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+:root{--bg:#10191d;--green:#8cff3f;--paper:#fff6ef;--pink:#e7196d;--ink:#684d4d}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg)}
+body{font-family:Inter,Arial,sans-serif;color:#fff}
+.page{width:min(720px,100vw);min-height:100vh;margin:auto;padding:28px 26px 22px}
+.heading{text-align:center;font-size:24px;font-weight:800;letter-spacing:-1px;margin-bottom:26px}
+.heading span{color:var(--green)}
+.demo{width:100%}
+.card{position:relative;width:100%;height:560px;border:2px solid #eee9e7;border-radius:4px;overflow:hidden;background:var(--paper);box-shadow:0 3px 16px #0004}
+.opening{position:absolute;inset:0;background:radial-gradient(circle at 50% 25%,#ffb7d550 0 13%,transparent 28%),linear-gradient(180deg,#fffaf6,#fff0e8);transition:opacity .4s}
+.tiny{position:absolute;top:27px;left:0;right:0;text-align:center;font:italic 13px Georgia,serif;color:#9d777b}
+.glow{position:absolute;left:50%;top:90px;width:135px;height:135px;transform:translateX(-50%);border-radius:50%;background:#ff7fa833;filter:blur(25px)}
+.heart{position:absolute;left:50%;top:106px;width:48px;height:48px;background:#ee176a;transform:translateX(-50%) rotate(-45deg);border-radius:7px;box-shadow:0 10px 30px #ee176a44;animation:pulse 1.8s infinite}
+.heart:before,.heart:after{content:"";position:absolute;width:48px;height:48px;background:#ee176a;border-radius:50%}
+.heart:before{top:-24px}.heart:after{left:24px}
+@keyframes pulse{50%{transform:translate(-50%,-5px) rotate(-45deg)}}
+.pull-flower{position:absolute;left:17.5%;bottom:49px;width:95px;height:125px;cursor:grab;touch-action:none;z-index:4;transform-origin:50% 100%}
+.pull-flower .stem{position:absolute;left:45px;bottom:0;width:4px;height:78px;background:#4b3835;border-radius:5px;transform:rotate(7deg);transform-origin:bottom}
+.twig{position:absolute;height:4px;background:#4b3835;border-radius:5px;transform-origin:left center}
+.t1{left:45px;bottom:43px;width:39px;transform:rotate(-58deg)}
+.t2{left:45px;bottom:27px;width:36px;transform:rotate(20deg)}
+.t3{left:46px;bottom:60px;width:29px;transform:rotate(-15deg)}
+.flower-head{position:absolute;left:34px;bottom:20px;width:28px;height:28px}
+.flower-head .p{position:absolute;left:7px;top:1px;width:14px;height:14px;border-radius:50%;background:#ff4f91;transform-origin:7px 13px}
+.flower-head .p1{transform:rotate(0deg) translateY(-6px)}
+.flower-head .p2{transform:rotate(72deg) translateY(-6px)}
+.flower-head .p3{transform:rotate(144deg) translateY(-6px)}
+.flower-head .p4{transform:rotate(216deg) translateY(-6px)}
+.flower-head .p5{transform:rotate(288deg) translateY(-6px)}
+.flower-head .center{position:absolute;left:10px;top:10px;width:9px;height:9px;border-radius:50%;background:#ffd6e3;box-shadow:0 0 0 2px #ff7ba9}
+.pull-label{position:absolute;left:0;right:0;bottom:24px;text-align:center;color:#a99390;font-size:9px;letter-spacing:4px}
+.pink-scene,.final-scene{position:absolute;inset:0;opacity:0;pointer-events:none}
+.pink-scene{background:radial-gradient(circle at 70% 25%,#ff86b533,transparent 25%),linear-gradient(120deg,#f32982,#c70858);z-index:8}
+.cinema-top,.cinema-bottom{position:absolute;left:0;right:0;height:16%;background:#100108}
+.cinema-top{top:0}.cinema-bottom{bottom:0}
+.pink-text{position:absolute;top:43%;left:0;right:0;text-align:center;transform:translateY(-50%);font:600 62px/.92 Georgia,serif;color:#fff}
+.final-scene{z-index:7;background:radial-gradient(circle at 52% 48%,#fffaf7,#fff2e8);color:#714f51}
+.wish{position:absolute;left:7%;bottom:48px;font:italic 22px Georgia,serif;color:#a83e69;z-index:4}
+.wish-small{position:absolute;left:7.5%;bottom:72px;font:italic 9px Georgia,serif;color:#8f7774}
+.tree{position:absolute;left:64%;bottom:0;width:340px;height:94%;transform:translateX(-50%) scaleY(.02);transform-origin:bottom;opacity:0}
+.tree-art{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible}
+.blossoms{position:absolute;left:35px;top:32px;width:270px;height:350px;opacity:0;transform:scale(.1)}
+.flower-dot{position:absolute;width:18px;height:18px;background:#ef1768;transform:rotate(calc(-45deg + var(--r, 0deg)));border-radius:3px;box-shadow:0 1px 5px #ef176833}
+.flower-dot:before,.flower-dot:after{content:"";position:absolute;width:18px;height:18px;background:#ef1768;border-radius:50%}
+.flower-dot:before{top:-8.5px;left:0}
+.flower-dot:after{top:0;left:8.5px}
+.flower-dot:before{top:-8.5px;left:0}
+.flower-dot:after{top:0;left:8.5px}
+
+.final-line{position:absolute;left:7%;bottom:17px;font:8px Georgia,serif;color:#8b6e6e}
+.again{display:none;position:absolute;right:9px;top:9px;z-index:20;border:1px solid #ffffff77;background:#0005;color:white;border-radius:20px;padding:7px 11px}
+.code-row{height:330px;position:relative;margin-top:18px}
+.code-card{position:absolute;left:5%;top:0;width:43%;height:285px;background:#1d1d24;border:2px solid #d8d7dc;border-radius:3px;padding:30px 13px 10px;box-shadow:0 5px 12px #0005}
+.small-code{left:auto;right:5%;top:86px;width:42%;height:210px}
+.dots{position:absolute;top:7px;left:8px;display:flex;gap:5px}
+.dots b{width:7px;height:7px;border-radius:50%;background:#ff5f56}.dots b:nth-child(2){background:#ffbd2e}.dots b:nth-child(3){background:#27c93f}
+pre{margin:0;white-space:pre-wrap;color:#e7e7ea;font:9px/1.45 "Courier New",monospace}
+pre span{color:#6dff6c}
+footer{display:flex;justify-content:space-between;align-items:center;margin-top:-4px}
+.creator{display:flex;align-items:center;gap:8px;font-size:13px}
+.avatar{width:33px;height:33px;border:1px solid #caa45c;border-radius:50%;display:grid;place-items:center;color:#d9bd7e;font-size:8px}
+.social{display:flex;gap:14px}.social span{color:#5ac9ff;text-align:center;font-size:17px}.social small{display:block;font-size:6px;margin-top:3px;color:#64bce1}
+.bottom-hint{text-align:center;color:#84959b;font-size:10px;letter-spacing:1.5px;margin-top:18px}
+
+.done .opening{opacity:0}
+.done .pink-scene{opacity:1;animation:pinkOut .9s 1.05s forwards}
+.done .pink-text{animation:textIn .8s .55s both}
+.done .final-scene{animation:finalIn 1s 2.25s forwards}
+.done .tree{animation:treeGrow 1.5s 2.7s forwards}
+.done .blossoms{animation:bloom 1.2s 4.0s forwards}
+.done .again{display:block}
+@keyframes pinkOut{0%{opacity:1}100%{opacity:0}}
+@keyframes textIn{from{opacity:0;transform:translateY(-42%)}to{opacity:1;transform:translateY(-50%)}}
+@keyframes finalIn{from{opacity:0}to{opacity:1}}
+@keyframes treeGrow{from{opacity:1;transform:translateX(-50%) scaleY(.02)}to{opacity:1;transform:translateX(-50%) scaleY(1)}}
+@keyframes bloom{from{opacity:0;transform:scale(.1)}to{opacity:1;transform:scale(1)}}
+
+@media(max-width:600px){
+  .page{padding:22px 14px}.heading{font-size:21px;margin-bottom:22px}.card{height:470px}
+  .pink-text{font-size:50px}.tree{left:66%;width:245px}.code-row{height:285px}.code-card{height:245px}.small-code{height:175px;top:70px}pre{font-size:7.5px}
+}
+

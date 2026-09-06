@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Birthday Gift</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="heading">Interactive <span>Birthday Gift</span></header>
+
+    <section class="demo" id="demo">
+      <div class="card" id="card">
+        <div class="opening">
+          <div class="tiny">a little something, for you</div>
+          <div class="glow"></div>
+          <div class="heart" id="heart"></div>
+
+          <div class="pull-flower" id="pullFlower" aria-label="Drag flower">
+            <span class="twig t1"></span>
+            <span class="twig t2"></span>
+            <span class="twig t3"></span>
+            <span class="stem"></span>
+            <span class="flower-head">
+              <i class="p p1"></i><i class="p p2"></i><i class="p p3"></i>
+              <i class="p p4"></i><i class="p p5"></i>
+              <i class="center"></i>
+            </span>
+          </div>
+
+          <div class="pull-label">PULL &amp; RELEASE</div>
+        </div>
+
+        <div class="pink-scene">
+          <div class="cinema-top"></div>
+          <div class="cinema-bottom"></div>
+          <div class="pink-text">Happy<br>Birthday</div>
+        </div>
+
+        <div class="final-scene">
+          <div class="wish">Happy Birthday</div>
+          <div class="wish-small">make a wish</div>
+
+          <div class="tree">
+            <svg class="tree-art" viewBox="0 0 340 520" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+  <g class="wood" fill="none" stroke="#5a3b38" stroke-linecap="round" stroke-linejoin="round">
+    <!-- main trunk: one continuous piece -->
+    <path stroke-width="19" d="M170 520 C168 445 169 375 170 305 C171 235 170 155 170 55"/>
+    <!-- lower left branch + twig -->
+    <path stroke-width="8" d="M170 375 C139 347 104 315 67 276"/>
+    <path stroke-width="6" d="M105 318 C91 302 76 282 64 260"/>
+    <!-- lower right branch + twig -->
+    <path stroke-width="8" d="M170 348 C205 320 240 286 278 247"/>
+    <path stroke-width="6" d="M235 291 C251 276 267 258 282 239"/>
+    <!-- middle left branch + twig -->
+    <path stroke-width="8" d="M170 300 C139 273 111 241 88 207"/>
+    <path stroke-width="6" d="M113 244 C95 229 77 208 62 188"/>
+    <!-- middle right branch + twig -->
+    <path stroke-width="8" d="M170 260 C202 233 229 205 254 171"/>
+    <path stroke-width="6" d="M229 206 C246 193 262 178 278 161"/>
+    <!-- upper left branch + twig -->
+    <path stroke-width="7" d="M170 210 C145 187 124 158 106 126"/>
+    <path stroke-width="5" d="M126 162 C111 150 98 135 88 119"/>
+    <!-- upper right branch + twig -->
+    <path stroke-width="7" d="M170 178 C194 154 214 127 232 94"/>
+    <path stroke-width="5" d="M211 132 C225 120 239 106 250 91"/>
+    <!-- top fork -->
+    <path stroke-width="7" d="M170 145 C171 118 170 88 170 58"/>
+  </g>
+</svg>
+            <div class="blossoms" id="blossoms"></div>
+          </div>
+
+          <div class="final-line">here's to another beautiful year.</div>
+        </div>
+
+        <button class="again" id="again">↻ Again</button>
+      </div>
+
+      <div class="code-row">
+        <div class="code-card">
+          <div class="dots"><b></b><b></b><b></b></div>
+          <pre><span>.wish</span>{
+  position:absolute;
+  left:5%;
+  bottom:10%;
+  max-width:46%;
+  z-index:6;
+  pointer-events:none;
+  color:var(--ink);
+}
+
+<span>.wish.is-in</span>{
+  visibility:visible;
+}
+
+<span>.wish::before</span>{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  opacity:1;
+  transition:opacity 1s;
+}</pre>
+        </div>
+
+        <div class="code-card small-code">
+          <div class="dots"><b></b><b></b><b></b></div>
+          <pre><span>.bar</span>{
+  position:absolute;
+  left:0;
+  right:0;
+  height:16%;
+  background:#100108;
+  z-index:3;
+  will-change:transform;
+}
+
+<span>.bar-top</span>{top:0}
+<span>.bar-bottom</span>{bottom:0}</pre>
+        </div>
+      </div>
+
+      <footer>
+        <div class="creator">
+          <div class="avatar">CW</div>
+          <strong>code_wars_official</strong>
+        </div>
+        <div class="social">
+          <span>♥<small>LIKE</small></span>
+          <span>▮<small>SAVE</small></span>
+          <span>➤<small>SHARE</small></span>
+        </div>
+      </footer>
+    </section>
+
+    <div class="bottom-hint">DRAG THE FLOWER DOWN &amp; RELEASE</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
